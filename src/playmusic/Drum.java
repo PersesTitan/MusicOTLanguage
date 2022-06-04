@@ -12,7 +12,7 @@ public class Drum implements TotalText {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
-            total.append("드럼1");
+            total.append("드럼1 ");
             System.out.println("하이헷");
         } catch (Exception ignored) {}
     }
@@ -23,7 +23,7 @@ public class Drum implements TotalText {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
-            total.append("드럼2");
+            total.append("드럼2 ");
             System.out.println("킥");
         } catch (Exception ignored) {}
     }
@@ -34,7 +34,7 @@ public class Drum implements TotalText {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
-            total.append("드럼3");
+            total.append("드럼3 ");
             System.out.println("퍼쿠");
         } catch (Exception ignored) {}
     }
@@ -45,7 +45,7 @@ public class Drum implements TotalText {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
-            total.append("드럼4");
+            total.append("드럼4 ");
             System.out.println("작은 북");
         } catch (Exception ignored) {}
     }
