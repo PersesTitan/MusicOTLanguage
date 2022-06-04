@@ -7,25 +7,21 @@ import static javax.swing.BoxLayout.*;
 
 public class ShowMusic extends JFrame {
 
-    private final JPanel panel = new JPanel();
-    private final Label label = new Label();
+    private final JTextArea area = new JTextArea();
+    private final String newLine = System.getProperty("line.separator");
 
     public ShowMusic() {
-        setSize(300, 300);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        final JScrollPane scrollBar = new JScrollPane(area);
+        add(scrollBar, "Center");
+        area.setEnabled(false);
         setTitle("OTLanguageMusic");
-
-        BoxLayout box = new BoxLayout(panel, Y_AXIS);
-        panel.setLayout(box);
-        add(panel);
-
-        panel.add(label);
-        panel.revalidate();
+        setSize(300, 300);
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    public void addLayout(String text) {
-        label.setText(text);
-        label.addNotify();
+    public void setTotalText(String text) {
+        area.append(text);
+        area.append(newLine);
     }
 }
