@@ -9,6 +9,10 @@ public class Setting {
     private final Pattern pattern = Pattern.compile(con);
     private static final Map<String, String> var = new HashMap<>();
 
+    public Setting() {
+        var.clear();
+    }
+
     public boolean findVar(String line) {
         return pattern.matcher(line).find();
     }
@@ -21,4 +25,9 @@ public class Setting {
         var.put(key, value);
     }
 
+    ///////////////////////////////////
+
+    public void setVar(String line) {
+
+    }
 }
