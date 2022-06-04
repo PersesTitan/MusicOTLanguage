@@ -15,12 +15,24 @@ public class Main {
     }
 
     private Main(String[] args) throws Exception {
-//        if (args.length < 1) throw new Exception("파일이 존재하지 않습니다.");
-//        else if (!new File(args[0]).canRead()) throw new Exception("파일을 읽을 수 없습니다.");
-//        else if (!args[0].toLowerCase(Locale.ROOT).endsWith("otlm")) throw new Exception("확장자를 확인해주세요.");
+        test();
+//        start(args);
+    }
 
-        args = new String[1];
-        args[0] = """
+    private void start(String[] args) throws Exception {
+        if (args.length < 1) throw new Exception("파일이 존재하지 않습니다.");
+        else if (!new File(args[0]).canRead()) throw new Exception("파일을 읽을 수 없습니다.");
+        else if (!args[0].toLowerCase(Locale.ROOT).endsWith("otlm")) throw new Exception("확장자를 확인해주세요.");
+
+        try (var reader = new BufferedReader(new FileReader(args[0], StandardCharsets.UTF_8))) {
+            final Encode encode = new Encode();
+            String text;
+            while ((text = reader.readLine()) != null) encode.start(text);
+        }
+    }
+
+    private void test() throws Exception {
+        String args = """
                 ㅇ도ㅇ ㅇ레ㅇ ㅇ도ㅇ
                 ㅇ도ㅇ
 
@@ -28,15 +40,9 @@ public class Main {
                 ㅇ드드ㅇ""";
 
         Encode encode = new Encode();
-        for (String line : args[0].split("\\n")) {
+        for (String line : args.split("\\n")) {
             encode.start(line);
         }
-
-//        try (var reader = new BufferedReader(new FileReader(args[0], StandardCharsets.UTF_8))) {
-//            final Encode encode = new Encode();
-//            String text;
-//            while ((text = reader.readLine()) != null) encode.start(text);
-//        }
     }
 
     private void pause() {
