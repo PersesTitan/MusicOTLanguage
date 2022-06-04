@@ -10,5 +10,8 @@ public class Setting {
         return var.containsKey(key);
     }
 
+    public void joinValue(String key, String value) {
+        var.put(key, value);
+    }
 
 }
