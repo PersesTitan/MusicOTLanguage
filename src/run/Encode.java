@@ -1,6 +1,7 @@
 package run;
 
 import gui.ShowMusic;
+import variable.Setting;
 
 import java.util.StringTokenizer;
 
@@ -8,18 +9,22 @@ public class Encode implements MainRun {
 
     private final ShowMusic showMusic = new ShowMusic();
     private final StringBuffer buffer = new StringBuffer();
+    private final Setting setting = new Setting();
 
     public void start(String line) throws Exception {
-        StringTokenizer tokenizer = new StringTokenizer(line);
-        buffer.setLength(0);
-        while (tokenizer.hasMoreTokens()) {
-            String text = tokenizer.nextToken();
-            new LineThread(text).start();
-
-            replace(text);
+        if (setting.findPut(line)) setting.putVar(line);
+        else {
+            if (setting.findOut(line)) line = setting.getVar(line);
+            StringTokenizer tokenizer = new StringTokenizer(line);
+            buffer.setLength(0);
+            while (tokenizer.hasMoreTokens()) {
+                String text = tokenizer.nextToken();
+                new LineThread(text).start();
+                this.replace(text);
+            }
+            showMusic.setTotalText(buffer.toString());
+            Thread.sleep(1000);
         }
-        showMusic.setTotalText(buffer.toString());
-        Thread.sleep(1000);
     }
 
     private void replace(String text) {
