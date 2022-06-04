@@ -10,6 +10,8 @@ public class LineThread extends Thread implements Runnable, MainRun {
 
     @Override
     public void run() {
-        try {mainStart(line);} catch (Exception ignored) {}
+        try {
+            mainStart(line);
+        } catch (Exception ignored) {}
     }
 }
