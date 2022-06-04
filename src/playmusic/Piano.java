@@ -5,7 +5,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
-public class Piano {
+public class Piano implements TotalText {
 
     public void sound1() {
         File file = new File("src/sound/sound1.wav").getAbsoluteFile();
@@ -13,6 +13,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            total.append("도");
             System.out.println("도");
         } catch (Exception ignored) {}
     }
@@ -23,6 +24,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            total.append("레");
             System.out.println("레");
         } catch (Exception ignored) {}
     }
@@ -33,6 +35,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            total.append("미");
             System.out.println("미");
         } catch (Exception ignored) {}
     }
@@ -43,6 +46,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            total.append("파");
             System.out.println("파");
         } catch (Exception ignored) {}
     }
@@ -53,6 +57,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            total.append("솔");
             System.out.println("솔");
         } catch (Exception ignored) {}
     }
@@ -63,6 +68,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            total.append("라");
             System.out.println("라");
         } catch (Exception ignored) {}
     }
@@ -73,6 +79,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            total.append("시");
             System.out.println("시");
         } catch (Exception ignored) {}
     }
