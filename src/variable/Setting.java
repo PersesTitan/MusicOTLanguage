@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Setting {
+    private final String con = "ㅇMㅇ";
     private static final Map<String, String> var = new HashMap<>();
 
     public boolean findKey(String key) {
@@ -13,5 +14,6 @@ public class Setting {
     public void joinValue(String key, String value) {
         var.put(key, value);
     }
+
 
 }
