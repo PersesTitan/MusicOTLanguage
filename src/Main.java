@@ -33,7 +33,9 @@ public class Main {
 
     private void test() throws Exception {
         String args = """
+                ㅇ음ㅇ ㅇㅇ:ㅇ미ㅇ ㅇ파ㅇ
                 ㅇ도ㅇ ㅇ레ㅇ ㅇ도ㅇ
+                :ㅇㅇ :ㅇㅇ
                 ㅇ도ㅇ
 
                 ㅇ드ㅇ ㅇ도ㅇ
