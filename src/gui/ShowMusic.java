@@ -1,9 +1,6 @@
 package gui;
 
 import javax.swing.*;
-import java.awt.*;
-
-import static javax.swing.BoxLayout.*;
 
 public class ShowMusic extends JFrame {
 
@@ -17,7 +14,6 @@ public class ShowMusic extends JFrame {
         setTitle("OTLanguageMusic");
         setSize(300, 300);
         setVisible(true);
-        pack();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
