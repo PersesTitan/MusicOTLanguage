@@ -6,11 +6,9 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 public class Setting {
-    private final String con = "\\n\\s*(ㅇMㅇ|ㅇ음ㅇ)\\s|^\\s*(ㅇMㅇ|ㅇ음ㅇ)\\s";
     private final String putVar = "^\\s*(ㅇMㅇ|ㅇ음ㅇ)\\s+\\S+:";
     private final String outVar = "(\\s+|^):\\S+(\\s+|$)";
 
-    private final Pattern pattern = Pattern.compile(con);
     private final Pattern putPattern = Pattern.compile(putVar);
     private final Pattern outPattern = Pattern.compile(outVar);
 
@@ -22,10 +20,6 @@ public class Setting {
     }
 
     //존재 찾기
-    public boolean findVar(String line) {
-        return pattern.matcher(line).find();
-    }
-
     public boolean findPut(String line) {
         return putPattern.matcher(line).find();
     }
