@@ -1,5 +1,3 @@
-package gui;
-
 import run.Encode;
 
 import javax.swing.*;

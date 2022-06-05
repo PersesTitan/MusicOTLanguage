@@ -12,7 +12,7 @@ public class Encode implements MainRun {
     private final Setting setting = new Setting();
 
     public void start(String line) throws Exception {
-        if (setting.findPut(line)) setting.putVar(line);
+        if (setting.findNew(line)) setting.createVar(line);
         else {
             if (setting.findOut(line)) line = setting.getVar(line);
             StringTokenizer tokenizer = new StringTokenizer(line);
