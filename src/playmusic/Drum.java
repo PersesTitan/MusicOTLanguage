@@ -1,4 +1,4 @@
-package run;
+package playmusic;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -13,6 +13,7 @@ public class Drum {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("하이헷");
         } catch (Exception ignored) {}
     }
 
@@ -22,6 +23,7 @@ public class Drum {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("킥");
         } catch (Exception ignored) {}
     }
 
@@ -31,6 +33,7 @@ public class Drum {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("퍼쿠");
         } catch (Exception ignored) {}
     }
 
@@ -40,6 +43,7 @@ public class Drum {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("작은 북");
         } catch (Exception ignored) {}
     }
 }
