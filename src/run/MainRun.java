@@ -1,5 +1,8 @@
 package run;
 
+import playmusic.Drum;
+import playmusic.Piano;
+
 public interface MainRun {
     Drum drum = new Drum();
     Piano piano = new Piano();
