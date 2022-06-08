@@ -1,4 +1,4 @@
-package run;
+package playmusic;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -13,6 +13,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("도");
         } catch (Exception ignored) {}
     }
 
@@ -22,6 +23,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("레");
         } catch (Exception ignored) {}
     }
 
@@ -31,6 +33,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("미");
         } catch (Exception ignored) {}
     }
 
@@ -40,6 +43,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("파");
         } catch (Exception ignored) {}
     }
 
@@ -49,6 +53,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("솔");
         } catch (Exception ignored) {}
     }
 
@@ -58,6 +63,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("라");
         } catch (Exception ignored) {}
     }
 
@@ -67,6 +73,7 @@ public class Piano {
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.start();
+            System.out.println("시");
         } catch (Exception ignored) {}
     }
 
