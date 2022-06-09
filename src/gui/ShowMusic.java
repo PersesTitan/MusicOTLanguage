@@ -8,6 +8,7 @@ import static javax.swing.BoxLayout.*;
 public class ShowMusic extends JFrame {
 
     private final JPanel panel = new JPanel();
+    private final Label label = new Label();
 
     public ShowMusic() {
         setSize(300, 300);
@@ -17,13 +18,14 @@ public class ShowMusic extends JFrame {
         BoxLayout box = new BoxLayout(panel, Y_AXIS);
         panel.setLayout(box);
         add(panel);
+
+        panel.add(label);
         panel.revalidate();
         setVisible(true);
     }
 
     public void addLayout(String text) {
-        Label label = new Label(text);
-        panel.add(label);
-        add(panel);
+        label.setText(text);
+        label.addNotify();
     }
 }
