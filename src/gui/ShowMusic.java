@@ -17,6 +17,7 @@ public class ShowMusic extends JFrame {
         setTitle("OTLanguageMusic");
         setSize(300, 300);
         setVisible(true);
+        pack();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 

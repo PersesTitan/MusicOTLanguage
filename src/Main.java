@@ -1,12 +1,13 @@
 import run.Encode;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
-import java.util.StringTokenizer;
 
 public class Main {
 
@@ -15,11 +16,15 @@ public class Main {
     }
 
     private Main(String[] args) throws Exception {
-        test();
-//        start(args);
+        start(args);
+//        test();
     }
 
     private void start(String[] args) throws Exception {
+        JFileChooser chooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("otl OR otlm", "otl", "otlm");
+
+
         if (args.length < 1) throw new Exception("파일이 존재하지 않습니다.");
         else if (!new File(args[0]).canRead()) throw new Exception("파일을 읽을 수 없습니다.");
         else if (!args[0].toLowerCase(Locale.ROOT).endsWith("otlm")) throw new Exception("확장자를 확인해주세요.");
